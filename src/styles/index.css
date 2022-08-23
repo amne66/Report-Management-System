@@ -10,6 +10,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* nav bar style */
 nav{
   display: flex;
   justify-content: space-around;
@@ -29,7 +30,6 @@ nav{
 .search-box{
 display: flex;
 width: 500px;
-
 }
 .search-div{
   cursor: pointer;
@@ -73,8 +73,6 @@ outline: none;
   cursor: pointer;
   gap: 10px;
 }
-
-
 
 /* sign up sign in  style */
 .home-container{
@@ -126,6 +124,22 @@ cursor: pointer;
   gap: 4px;
 justify-content: center;
 align-items: center;
+}
+.no-line{
+  text-decoration: none;
+}
+.our-blue{
+  color: #2E86C1;
+  font-size: 40px;
+}
+.red{
+  color: red;
+}
+.display{
+  display: block;
+}
+.hide{
+  display: none;
 }
 
 /* create group  style */
@@ -193,4 +207,31 @@ align-items: center;
 }
 .delete:hover{
   color: #2E86C1;
+}
+
+/* new report style */
+.new-report-container{
+display: flex;
+flex-direction: column;
+gap: 10px;
+justify-content: center;
+align-items: center;
+margin-top: 30px;
+}
+.report-input{
+  outline: none;
+  width: 400px;
+  height: 10px;
+}
+.publish-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2E86C1;
+  color: white;
+  width: 90px;
+  height: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: medium;
 }

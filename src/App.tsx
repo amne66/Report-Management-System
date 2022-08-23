@@ -8,11 +8,11 @@ import { CreateGroupPage } from './pages/CreateGroup';
 
 function App() {
   return <>
-     <Navbar></Navbar>
-  < Home/>
+     {/* <Navbar></Navbar>
+  < Home/> */}
 {/* <SignIn></SignIn> */}
-{/* <SignUp></SignUp> */}
-<CreteGroup></CreteGroup>
+<SignUp></SignUp>
+{/* <CreteGroup></CreteGroup> */}
 {/* <CreateGroupPage /> */}
 {/* <Reports></Reports> */}
   </>

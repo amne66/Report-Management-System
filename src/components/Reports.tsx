@@ -1,21 +1,15 @@
-import { collection, deleteDoc, doc, onSnapshot } from 'firebase/firestore';
-import { useEffect, useState } from 'react';
+import { deleteDoc, doc } from 'firebase/firestore';
 import { MdOutlineModeEdit } from 'react-icons/md';
 import { RiDeleteBin6Line } from 'react-icons/ri';
-import { IReportProps } from '../data/report';
+import { useParams } from 'react-router-dom';
+import { IReportProps, reportArr } from '../data/report';
 import { db } from '../firebaseSetup';
+import { Navbar } from './Navbar';
 
 export function Reports(){
-    const [report, setReport] = useState([]);
-    const reportRef = collection(db, "reports");
-    useEffect(() => {
-      onSnapshot(reportRef, (querySnapshot:any) => {
-        setReport(querySnapshot.docs.map((doc: { id: any; data: () => any; }) => ({
-          id: doc.id,
-          data: doc.data() 
-        })))
-      })
-    },[])
+
+    const params:any = useParams();
+    const groupReport = reportArr.filter((elm) =>elm.data.group_id  === params.id)
 
     const deleteReport = async (id:any) => {
         const userDoc = doc(db, "reports", id);
@@ -23,8 +17,9 @@ export function Reports(){
     };
 
     return<>
+    <Navbar />
     <div className="reports-container">  
-    {report.map((report : IReportProps) => (
+    {groupReport.map((report : IReportProps) => (
     <div className="report-item">
       {report.data.title}
       <div className="report-item-icons">

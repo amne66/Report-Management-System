@@ -3,8 +3,11 @@ import './styles/index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './components/Home';
-import { CreateGroupPage } from './pages/CreateGroup';
-import App from './App';
+import { SignUp } from './components/SignUp';
+import { SignIn } from './components/SignIn';
+import { CreteGroup } from './components/CreateGroupe';
+import { Reports } from './components/Reports';
+import { NewReport } from './components/NewReport';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,14 +15,14 @@ const root = ReactDOM.createRoot(
 root.render(
 <BrowserRouter>
 		<Routes>
-			 <Route path='/' element={<App />} />
-			 <Route path='/create/group' element={<CreateGroupPage/>} />
+	   <Route path='/' element={<SignUp />} />
+       <Route path='/groups' element={< Home/>} />
+	   <Route path='/create/group' element={<CreteGroup/>} />
+       <Route path='/signin' element={<SignIn/>} />
+       <Route path='/reports/:id' element={<Reports/>} />
+       <Route path='/create/report' element={<NewReport/>} />
 
 		</Routes>
 	</BrowserRouter>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
