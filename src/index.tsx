@@ -10,6 +10,8 @@ import { Reports } from './components/Reports';
 import { NewReport } from './components/NewReport';
 import { UpdateReport } from './components/UpdateReport';
 import { ViewReport } from './components/ViewReport';
+import { Message } from './components/Message';
+import { UpdateGroup } from './components/UpdateGroup';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -21,10 +23,14 @@ root.render(
        <Route path='/groups' element={< Home/>} />
 	     <Route path='/create/group' element={<CreteGroup/>} />
        <Route path='/signin' element={<SignIn/>} />
-       <Route path='/reports/:id' element={<Reports/>} />
+       <Route path='/reports/:id/:type' element={<Reports/>} />
        <Route path='/create/report/:gid' element={<NewReport/>} />
        <Route path='/update/report/:id/:gid' element={<UpdateReport/>} />
        <Route path='/view/:id' element={<ViewReport/>} />
+       <Route path='/permission' element={<Message/>} />
+       <Route path='/update/group/:id' element={<UpdateGroup/>} />
+
+
 
 		</Routes>
 	</BrowserRouter>

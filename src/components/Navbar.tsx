@@ -14,7 +14,7 @@ export function Navbar(){
 
     return<>
     <nav>
-   <img className="logo" src="logo.png" alt="" />
+   <img className="logo" src="https://i.ibb.co/mzyhp8R/logo.png" alt="" />
    <div className="search-div">
     <input type="text" className="search-box" placeholder="Search"/>
     <IoSearch color='grey'/>

@@ -25,7 +25,7 @@ export function Home(){
 
   const isadmin = usersArr.filter((elem) =>elem.id  === user?.uid);    
           if(isadmin[0].data.role === 'admin'){
-            visibility = 'display group-card';
+            visibility = 'new-group-card';
             iconsVisibility ='display update';
           }else{
           visibility = 'hide';
@@ -51,37 +51,35 @@ export function Home(){
   function users(usersEdit:any , usersView:any , groupID:string){
     const isEditor = usersEdit.find((elm:any) => elm.value === user?.uid);
     const isviwer = usersView.find((elm:any) => elm.value === user?.uid);
-  if(isEditor || isviwer){
-    navigate(`/reports/${groupID}`);
+  if(isEditor || isadmin[0].data.role === 'admin' ){
+    navigate(`/reports/${groupID}/${'edit'}`);
+  }else if(isviwer){
+    navigate(`/reports/${groupID}/${'view'}`);
   }else{
-    console.log('you are not allowed to view this group');
-    
+    navigate('/permission');
   }
   }
-
-
-  // `/reports/${groupItem.id}`
 
   return<>
     <Navbar></Navbar>
-    <h1>Groups</h1>
+    <h1 className="group-title">Groups</h1>
     <div className="group-container">
-    <div className={visibility}  >
-      <IoAddCircle color="#2E86C1" size={50}/>
-      Create Group
+    <div className={visibility} onClick={() => {navigate("/create/group");}}  >
+      <IoAddCircle color="#2E86C1" size={50} />
+      <p>Create Group</p>
     </div>
     {group.map((groupItem : IGroupProps) => ( 
-    <div className="group-card" onClick={() => {
-      users(groupItem.data.usersEdit, groupItem.data.usersView , groupItem.id);
-    }}>
+    <div className="group-card">
       <div className="group-item-icons">
-      <MdOutlineModeEdit className={iconsVisibility} />
+      <MdOutlineModeEdit className={iconsVisibility} onClick={() => {navigate(`/update/group/${groupItem.id}`);}} />
       <RiDeleteBin6Line className={iconsVisibility} onClick={() => {
         deleteGroup(groupItem.id);
       }} /> 
       </div>  
+    <div onClick={() => {users(groupItem.data.usersEdit, groupItem.data.usersView , groupItem.id);}}>
     {groupItem.data.name}
-   </div>
+    </div>  
+    </div>
     ))}
     </div>
     </>

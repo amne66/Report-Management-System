@@ -53,13 +53,17 @@ outline: none;
 }
 
 /* home page  */
+.group-title{
+  color: #2E86C1;
+  margin-top: 30px;
+  margin-left: 200px;
+}
 .group-container{
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  /* padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  gap: 1px; */
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 .group-card{
   background-color:  hsl(205, 33%, 93%);
@@ -71,7 +75,22 @@ outline: none;
   justify-content: center;
   align-items: center;
   color: #2E86C1;
+  font-weight: bolder;
   cursor: pointer;
+  gap: 10px;
+}
+.new-group-card{
+  background-color:  hsl(205, 33%, 93%);
+  width: 179px;
+  height: 162px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:#2E86C1;
+  cursor: pointer;
+  font-weight: bolder;
   gap: 10px;
 }
 .group-item-icons{
@@ -148,6 +167,12 @@ align-items: center;
 }
 
 /* create group  style */
+.form-container{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .new-group-form{
   display: flex;
   border-radius: 8px;
@@ -155,9 +180,15 @@ align-items: center;
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: fit-content;
-  padding: 40px;
+  padding: 60px;
   gap: 10px;
   color: #2E86C1;
+}
+.group-btns{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 8px;
 }
 .submit-btn{
   background-color: #2E86C1;
@@ -167,7 +198,15 @@ align-items: center;
   width: 120px;
   border-radius: 6px;
   padding: 6px;
-  margin-left: 10%;
+}
+.cancel-btn-group{
+  background-color: #e15959;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  width: 120px;
+  border-radius: 6px;
+  padding: 6px;
 }
 .group-page{
   display: flex;
@@ -306,7 +345,7 @@ padding-bottom: 30px;
 
 /* view report style */
 .report-view{
-  background-color: rgba(255, 255, 255, 0.87);
+  background-color: white;
   border: 1px solid #2E86C1;
   border-radius: 8px;
   font-size: large;
@@ -317,7 +356,7 @@ padding-bottom: 30px;
   text-align: center;
 }
 .report-view-details{
-  background-color: rgba(255, 255, 255, 0.87);
+  background-color: white;
   border: 1px solid #2E86C1;
   border-radius: 8px;
   font-size: large;
@@ -334,5 +373,23 @@ padding-bottom: 30px;
 .view-titles{
   font-size: 20px;
   color: #2E86C1;
+  padding-bottom: 4px;
+}
 
+/* message style */
+.message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  color: #e15959;
+  flex-direction: column;
+  gap: 8px;
+}
+.back-btn{
+  padding: 5px 20px;
+  color: white;
+  background-color: #2E86C1;
+  border-radius: 8px;
+  cursor: pointer;
 }

@@ -1,6 +1,6 @@
 import RichTextEditor from "@mantine/rte";
 import { getAuth } from "firebase/auth";
-import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
+import { doc, updateDoc } from "firebase/firestore";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { reportArr } from "../data/report";
@@ -30,10 +30,11 @@ export function UpdateReport(){
                 group_id: params.gid,
                 uploader_id: user?.uid,
              })
-             navigate(`/reports/${params.gid}`);
+             navigate(`/reports/${params.gid}/${'edit'}`);
            } catch (err) {
              console.log(err);          
-           }         
+            }         
+    
     }
 
 
@@ -50,7 +51,7 @@ export function UpdateReport(){
     ]} className="report-text"  />
     <input type='file' multiple/>
     <div className="report-flex">
-    <div className="cancel-btn"onClick={() => {navigate(`/reports/${params.gid}`);}}>Cancel</div>
+    <div className="cancel-btn"onClick={() => {navigate(`/reports/${params.gid}/${'edit'}`);}}>Cancel</div>
     <div className="publish-btn" onClick={updateReport}>Update</div>
     </div>
     </div>

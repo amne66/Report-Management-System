@@ -29,7 +29,7 @@ export function NewReport(){
             group_id: params.gid,
            uploader_id: user?.uid,
         })
-        navigate(`/reports/${params.gid}`);
+        navigate(`/reports/${params.gid}/${'edit'}`);
      }
 
 
@@ -46,7 +46,7 @@ export function NewReport(){
     ]} className="report-text" />
     <input type='file' multiple/>
     <div className="report-flex">
-    <div className="cancel-btn" onClick={() => {navigate(`/reports/${params.gid}`);}}>Cancel</div>
+    <div className="cancel-btn" onClick={() => {navigate(`/reports/${params.gid}/${'edit'}`);}}>Cancel</div>
     <div className="publish-btn" onClick={addReport}>Publish</div>
     </div>
     </div>
