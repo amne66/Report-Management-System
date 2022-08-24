@@ -1,7 +1,7 @@
 export interface IGroup {
     name: string;
-	users: string[];
-	reports: string[];
+	usersView: string[];
+	usersEdit: string[];
     adminID:string;
 }
 export interface IGroupProps {

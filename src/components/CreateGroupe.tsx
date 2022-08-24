@@ -7,7 +7,6 @@ import { db } from "../firebaseSetup";
 import { Navbar } from "./Navbar";
 
 
-
 export function CreteGroup(){
 
   function newGroup(){
@@ -21,21 +20,23 @@ export function CreteGroup(){
         usersView: selectedOptionView,
         usersEdit:selectedOptionEdit,
      })
+     console.log(selectedOptionView);
+     
   }
 
-  const options = usersArr.map((elm)=>({
+  let options = usersArr.map((elm)=>({
     value: elm.id,
     label: elm.data.name,
   }));
-  console.log(options)
+
  const [ selectedOptionView, setSelectedOptionView] = useState(null);
  const [ selectedOptionEdit, setselectedOptionEdit] = useState(null);
-
  const [groupName, setGroupName] = useState("");
 
  const handleChangeview = (selectedOptionView:any) => {
   setSelectedOptionView(selectedOptionView) 
  }
+
  const handleChangeEdit = (selectedOptionEdit:any) => {
   setselectedOptionEdit(selectedOptionEdit) 
  }

@@ -22,7 +22,8 @@ export function SignIn(){
           );
           const isadmin = usersArr.filter((elem) =>elem.id  === user.user.uid);    
           if(isadmin[0].data.role === 'admin'){
-            navigate("/create/group");
+            // navigate("/create/group");
+            navigate("/groups");
           }else{
           navigate("/groups");}
         } catch (error:any) {

@@ -74,6 +74,10 @@ outline: none;
   cursor: pointer;
   gap: 10px;
 }
+.group-item-icons{
+  display: flex;
+}
+
 
 /* sign up sign in  style */
 .home-container{
