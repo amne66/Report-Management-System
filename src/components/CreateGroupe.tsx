@@ -1,4 +1,3 @@
-import { getAuth } from "firebase/auth";
 import { addDoc,collection,} from "firebase/firestore";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";

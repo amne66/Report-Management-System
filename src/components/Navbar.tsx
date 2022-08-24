@@ -1,6 +1,6 @@
 import { signOut } from 'firebase/auth';
-import { IoLogOutOutline, IoSearch } from 'react-icons/io5';
-import { useNavigate } from 'react-router-dom';
+import { IoLogOutOutline } from 'react-icons/io5';
+import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../firebaseSetup';
 
 export function Navbar(){
@@ -15,9 +15,9 @@ export function Navbar(){
     return<>
     <nav>
    <img className="logo" src="https://i.ibb.co/mzyhp8R/logo.png" alt="" />
-   <div className="search-div">
-    <input type="text" className="search-box" placeholder="Search"/>
-    <IoSearch color='grey'/>
+   <div className='nav-con'>
+   <Link to={'/groups'} className='no-line-nav' >Home </Link>
+   <Link to={'/search'} className='no-line-nav' >Search </Link>
    </div>
    <div className="logout" ><IoLogOutOutline onClick={logout}  size={28}/></div>
     </nav>

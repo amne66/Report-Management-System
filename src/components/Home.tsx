@@ -1,9 +1,8 @@
-import { group } from "console";
 import { getAuth } from "firebase/auth";
 import { collection, deleteDoc, doc, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { IoAddCircle } from "react-icons/io5";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import { IGroupProps } from "../data/group";
 import { usersArr } from "../data/users";
 import { db } from "../firebaseSetup";

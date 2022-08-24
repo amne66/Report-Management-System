@@ -12,6 +12,7 @@ import { UpdateReport } from './components/UpdateReport';
 import { ViewReport } from './components/ViewReport';
 import { Message } from './components/Message';
 import { UpdateGroup } from './components/UpdateGroup';
+import { Search } from './components/Search';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -29,9 +30,7 @@ root.render(
        <Route path='/view/:id' element={<ViewReport/>} />
        <Route path='/permission' element={<Message/>} />
        <Route path='/update/group/:id' element={<UpdateGroup/>} />
-
-
-
+       <Route path='/search' element={<Search/>} />
 		</Routes>
 	</BrowserRouter>
 );

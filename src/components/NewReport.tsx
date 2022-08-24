@@ -44,7 +44,6 @@ export function NewReport(){
         ['unorderedList', 'h1', 'h2', 'h3'],
         ['alignLeft', 'alignCenter', 'alignRight'],
     ]} className="report-text" />
-    <input type='file' multiple/>
     <div className="report-flex">
     <div className="cancel-btn" onClick={() => {navigate(`/reports/${params.gid}/${'edit'}`);}}>Cancel</div>
     <div className="publish-btn" onClick={addReport}>Publish</div>
