@@ -33,7 +33,7 @@ export function SignUp(){
             
           });
           
-          navigate("/create/group");
+          navigate("/groups");
         } catch (error : any) {
           const errorMessage = error.message.substring(10);
           seterorr(errorMessage)
