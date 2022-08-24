@@ -3,8 +3,8 @@ import { db } from "../firebaseSetup";
 
 export interface IReport {
     title: string;
-    content: string;
-    tags: string[];
+    content: any;
+    tags: string;
     group_id: string;
     uploader_id: string;
 }

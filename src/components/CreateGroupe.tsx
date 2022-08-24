@@ -20,7 +20,6 @@ export function CreteGroup(){
         name: groupName,
         usersView: selectedOptionView,
         usersEdit:selectedOptionEdit,
-        reports: [],
      })
   }
 
