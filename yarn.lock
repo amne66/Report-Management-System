@@ -2028,7 +2028,7 @@
   "resolved" "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   "version" "2.0.4"
 
-"@mantine/core@5.2.3":
+"@mantine/core@^5.2.3", "@mantine/core@5.2.3":
   "integrity" "sha512-1qhlyPE357zS99lSSmeiWLnJe5wubXyX9RiNjKD9N47UeiNXvkFQREfEsKPd6jDn+xQdcY8H8GL62Y9xSkSwuQ=="
   "resolved" "https://registry.npmjs.org/@mantine/core/-/core-5.2.3.tgz"
   "version" "5.2.3"
@@ -2039,7 +2039,7 @@
     "@radix-ui/react-scroll-area" "1.0.0"
     "react-textarea-autosize" "8.3.4"
 
-"@mantine/hooks@5.2.3":
+"@mantine/hooks@^5.2.3", "@mantine/hooks@5.2.3":
   "integrity" "sha512-8JuNVnC9Df1MsbQLbRxp6PakwakM2O+P6zXYYfFQNUmsHqBzvU8u7fzeiRVCefW7rP3o1+39Qpm3pkQUz+T90w=="
   "resolved" "https://registry.npmjs.org/@mantine/hooks/-/hooks-5.2.3.tgz"
   "version" "5.2.3"
